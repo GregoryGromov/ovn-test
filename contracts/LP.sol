@@ -71,6 +71,8 @@ contract LP is ILP {
             );
         }        
         
+// Uncomment to transfer funds to the liquidity pool:
+
         // token0.transferFrom(msg.sender, address(this), amount0);
         // token1.transferFrom(msg.sender, address(this), amount1);
 

@@ -60,7 +60,6 @@ describe("Sqrt from borders test 1", function () {
     console.log(`     sqrtPB: ${sqrtPB}`);
     console.log(`     sqrtPrice: ${sqrtPrice}`);
     
-    // Проверки, что sqrtPA <= sqrtPrice и sqrtPrice <= sqrtPB
     expect(sqrtPA).to.be.at.most(sqrtPrice);
     expect(sqrtPrice).to.be.at.most(sqrtPB);
   });
@@ -236,15 +235,5 @@ describe("provideLiquidity revert test", function () {
     await expect(contract.provideLiquidity(uniswapPoolAddress, width, amount0, amount1))
       .to.be.revertedWith("Invalid amounts: both amount1 and amount2 must not be zeros.");
   });
-
-  // it("Should revert when amount0 < 0", async function () {     
-  //   const width = 3200;
-  //   // Incorrect:
-  //   const amount0 = -100; 
-  //   const amount1 = 0; 
-
-  //   await expect(contract.provideLiquidity(uniswapPoolAddress, width, amount0, amount1))
-  //     .to.be.revertedWith("Invalid amount0: the value must be greater than or equal to zero.");
-  // });
 });
 
