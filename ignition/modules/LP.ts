@@ -5,7 +5,7 @@ import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
 const npmAddress = "0xC36442b4a4522E871399CD717aBDD847Ab11FE88";
 
-const LPM = buildModule("LP33", (m) => {
+const LPM = buildModule("LP53", (m) => {
   const LP = m.contract("LP", [npmAddress]);
 
   return { LP };
